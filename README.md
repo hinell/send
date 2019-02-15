@@ -119,6 +119,15 @@ Serve files relative to `path`.
 Byte offset at which the stream starts, defaults to 0. The start is inclusive,
 meaning `start: 2` will include the 3rd byte in the stream.
 
+##### fs
+
+**Default**: [require('fs')](https://nodejs.org/api/fs.html)
+
+File system to serve files by default. 
+```js
+  send(req, path, { fs: mockedFileSystem })
+```
+
 #### Events
 
 The `SendStream` is an event emitter and will emit the following events:
